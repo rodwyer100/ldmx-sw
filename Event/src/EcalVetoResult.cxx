@@ -20,6 +20,7 @@ namespace ldmx {
     void EcalVetoResult::Clear() {
 
         passesVeto_ = false;
+        passesTrackingVeto_ = false;
 
         nReadoutHits_ = 0;
         summedDet_ = 0;

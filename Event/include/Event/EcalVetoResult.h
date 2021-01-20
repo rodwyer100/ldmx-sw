@@ -183,6 +183,9 @@ namespace ldmx {
             void setDiscValue(float discValue) {
                 discValue_ = discValue;
             }
+            void setTrackingVetoResult(bool passesTrackVeto) {
+                passesTrackVeto_ = passesVeto;
+            }
 
             /** Return the momentum of the recoil at the Ecal face. */
             std::vector<double> getRecoilMomentum() { return { recoilPx_, recoilPy_, recoilPz_ }; };
@@ -197,6 +200,7 @@ namespace ldmx {
 
             /** Flag indicating whether the event is vetoed by the Ecal. */
             bool passesVeto_{false};
+            bool passesTrackingVeto{false};
 
             int nReadoutHits_{0};
             int deepestLayerHit_{0};
